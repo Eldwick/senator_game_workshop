@@ -1,0 +1,2 @@
+module SenatorHelper
+end

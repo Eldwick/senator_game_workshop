@@ -1,0 +1,15 @@
+<div id="gameContainer">
+  <h1>Guess the Senators State</h1>
+  <%= image_tag(@senator.image_url) %>
+  <h2><%= @senator.name %></h2>
+  <%= form_tag("/", method:"get") do %>
+  <input type="text" id="guess" placeholder="Guess the State">
+  <input hidden name="answer" value="<%= @senator.state %>">
+  <br>
+  <button id="check" onclick="checkAnswer()">Check</button>
+  <% end %>
+  <div class="result"></div>
+</div>
+<script>
+var answer = "<%= @senator.state %>"
+</script>
